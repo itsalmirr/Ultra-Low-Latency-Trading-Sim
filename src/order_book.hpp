@@ -1,39 +1,39 @@
 #pragma once
 
-#include "order.hpp"
-#include <vector>
-#include <optional>
 #include <cstdint>
+#include <optional>
+#include <vector>
 
-namespace ullts
-{
-    class OrderBook
-    {
-    public:
-        // Rule of 5 - explicitly defaulted for clarity
-        OrderBook() = default;
-        OrderBook(const OrderBook &) = default;
-        OrderBook &operator=(const OrderBook &) = default;
-        OrderBook(OrderBook &&) noexcept = default;
-        OrderBook &operator=(OrderBook &&) noexcept = default;
-        ~OrderBook() = default;
+#include "order.hpp"
 
-        // Add a new order to the book
-        void add_order(const Order &order);
+namespace ullts {
+class OrderBook {
+ public:
+  // Rule of 5 - explicitly defaulted for clarity
+  OrderBook() = default;
+  OrderBook(const OrderBook &) = default;
+  OrderBook &operator=(const OrderBook &) = default;
+  OrderBook(OrderBook &&) noexcept = default;
+  OrderBook &operator=(OrderBook &&) noexcept = default;
+  ~OrderBook() = default;
 
-        // Cancel order by ID, returns true if successful
-        [[nodiscard]] bool cancel_order(std::uint64_t order_id);
+  // Add a new order to the book
+  void add_order(const Order &order);
 
-        // Try to find an order by ID
-        [[nodiscard]] std::optional<ullts::Order> get_order(std::uint64_t order_id) const;
+  // Cancel order by ID, returns true if successful
+  [[nodiscard]] bool cancel_order(std::uint64_t order_id);
 
-        // Get all open orders (for test/inspection)
-        [[nodiscard]] std::vector<Order> get_all_orders() const;
+  // Try to find an order by ID
+  [[nodiscard]] std::optional<ullts::Order> get_order(
+      std::uint64_t order_id) const;
 
-        // Clear the order book
-        void clear() noexcept;
+  // Get all open orders (for test/inspection)
+  [[nodiscard]] std::vector<Order> get_all_orders() const;
 
-    private:
-        std::vector<Order> orders_{};
-    };
-}
+  // Clear the order book
+  void clear() noexcept;
+
+ private:
+  std::vector<Order> orders_{};
+};
+}  // namespace ullts
