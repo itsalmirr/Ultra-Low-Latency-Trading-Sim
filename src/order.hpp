@@ -31,5 +31,4 @@ namespace ullts
         Order &operator=(Order &&) noexcept = default;
         ~Order() = default;
     };
-
 }
