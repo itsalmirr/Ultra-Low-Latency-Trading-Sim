@@ -1,0 +1,117 @@
+# Build directories
+build/
+cmake-build-*/
+out/
+bin/
+lib/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# Build artifacts
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+
+# Debug and profiling files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+*.ilk
+*.map
+*.exp
+
+# IDE and Editor files
+.vscode/
+.vs/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.tlog
+*.lastbuildstate
+*.unsuccessfulbuild
+
+# Documentation generated files
+docs/html/
+docs/latex/
+docs/xml/
+*.pdf
+Doxyfile
+!docs/Doxyfile.in
+
+# Testing and coverage
+Testing/
+*.gcov
+*.gcda
+*.gcno
+coverage/
+coverage.info
+lcov.info
+
+# Package managers and dependencies
+conan/
+vcpkg_installed/
+.conan/
+conanbuildinfo.*
+conaninfo.txt
+
+# System and runtime files
+core
+*.core
+*.stackdump
+*.crash
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+
+# Archive files (unless specifically needed)
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Performance and profiling data
+*.prof
+perf.data*
+callgrind.out.*
+massif.out.*
+cachegrind.out.*
+
+# Trading-specific temporary files (if any)
+*.market_data_cache
+*.tick_data
+*.trade_log
+*.order_book_snapshot
+
+# Environment and configuration files (add project-specific ones)
+.env
+.env.local
+config.local.*
+secrets.txt
