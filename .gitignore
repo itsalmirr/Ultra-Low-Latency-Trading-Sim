@@ -4,6 +4,7 @@ cmake-build-*/
 out/
 bin/
 lib/
+.idea
 
 # CMake generated files
 CMakeCache.txt
