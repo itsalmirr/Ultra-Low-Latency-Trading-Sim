@@ -1,6 +1,5 @@
 #pragma once
 
-#include <cstdint>
 #include <optional>
 #include <vector>
 
@@ -24,8 +23,7 @@ class OrderBook {
   [[nodiscard]] bool cancel_order(std::uint64_t order_id);
 
   // Try to find an order by ID
-  [[nodiscard]] std::optional<ullts::Order> get_order(
-      std::uint64_t order_id) const;
+  [[nodiscard]] std::optional<Order> get_order(std::uint64_t order_id) const;
 
   // Get all open orders (for test/inspection)
   [[nodiscard]] std::vector<Order> get_all_orders() const;
