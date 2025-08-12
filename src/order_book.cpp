@@ -6,7 +6,9 @@
 namespace ullts {
 void OrderBook::add_order(const Order& /*order*/) {}
 
-bool OrderBook::cancel_order(std::uint64_t /*order_id*/) { return false; };
+bool OrderBook::cancel_order(std::uint64_t /*order_id*/) { return false; }
+
+== == == = ;
 
 std::optional<ullts::Order> OrderBook::get_order(
     std::uint64_t /*order_id*/) const {
@@ -14,6 +16,5 @@ std::optional<ullts::Order> OrderBook::get_order(
 }
 
 std::vector<Order> OrderBook::get_all_orders() const { return {}; }
-
-void OrderBook::clear() noexcept {}
+z void OrderBook::clear() noexcept {}
 }  // namespace ullts
