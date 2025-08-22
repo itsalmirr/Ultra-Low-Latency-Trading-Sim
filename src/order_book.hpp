@@ -1,6 +1,7 @@
 #pragma once
 
 #include <optional>
+#include <unordered_map>
 #include <vector>
 
 #include "order.hpp"
@@ -32,6 +33,6 @@ class OrderBook {
   void clear() noexcept;
 
  private:
-  std::vector<Order> orders_{};
+  std::unordered_map<std::uint64_t, Order> orders_{};
 };
 }  // namespace ullts

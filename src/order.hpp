@@ -24,5 +24,8 @@ struct Order {
   Order(Order &&) noexcept = default;
   Order &operator=(Order &&) noexcept = default;
   ~Order() = default;
+
+  Order(std::uint64_t i, const std::string& s, OrderSide os, double p, std::uint32_t q)
+      : id(i), symbol(s), side(os), price(p), quantity(q) {}
 };
 }  // namespace ullts
